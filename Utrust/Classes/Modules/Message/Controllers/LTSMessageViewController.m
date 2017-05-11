@@ -16,15 +16,14 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
 
     NSString *urlStr = [kLTSDBBaseUrl stringByAppendingString:@"appInterfaceController.do?oauthview#/home"];
 //    NSMutableURLRequest *requst = [NSMutableURLRequest requestWithURL:];
-    
+    NSLog(@"string：%@",urlStr);
     self.url = [NSURL URLWithString:urlStr];
 
 //    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
-//    
+//
 //    [self.view addSubview:self.webView];
     
     [[LTSNotification rac_addObserverForName:KNotification_MessageChange  object:nil] subscribeNext:^(id x) {
@@ -34,6 +33,9 @@
         }];
     }];
 
+    [super viewDidLoad];
+
+    
 }
 
 

@@ -21,12 +21,14 @@
     [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"shouldOverrideUrlLoading"];
 }
 - (void)viewDidLoad {
-     NSString *urlStr = [kLTSDBBaseUrl stringByAppendingString:@"appInterfaceController.do?oauthview#/work"];
-    self.url = [NSURL URLWithString:urlStr];
-   
-    [super viewDidLoad];
+
     
+     NSString *urlStr = [kLTSDBBaseUrl stringByAppendingString:@"appInterfaceController.do?oauthview#/work"];
+     self.url = [NSURL URLWithString:urlStr];
    
+    
+    [super viewDidLoad];
+
 }
 
 
