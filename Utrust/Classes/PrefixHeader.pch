@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  CMSP
+//
+//  Created by 李棠松 on 2016/11/30.
+//  Copyright © 2016年 李棠松. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <Masonry/Masonry.h>
+#import <MJExtension/MJExtension.h>
+#import <AFNetworking/AFNetworking.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "LTSDBClickManager.h"
+
+#import "LTSMacros.h"
+#import "Const.h"
+#import "LTSAppDelegate.h"
+#import "TextChecker.h"
+#import "MMActivityHub.h"
+#import "StringConst.h"
+#import "SettingView.h"
+#import "LTSBaseNavigationController.h"
+#import "LTSCustomButton.h"
+#import "LTSUser.h"
+#import "XMPPManager.h"
+
+#import "UIViewController+HUD.h"
+#import "UIColor+Common.h"
+#import "UIImage+Common.h"
+#import "UITextField+Common.h"
+#import "UIButton+Style.h"
+#import "UIView+Common.h"
+#import "NSString+Common.h"
+
+
+#define    Current_Version    [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define Scale Screen_Width/375
+#define LTSUserDes    [LTSUser userFromData:[LTSUserDefault valueForKey:KPath_UserDes]]
+#define LTSUserDefault  [NSUserDefaults standardUserDefaults]
+#define   LTSNotification    [NSNotificationCenter defaultCenter]
+#define LTSAppDelegated ((LTSAppDelegate *)[UIApplication sharedApplication].delegate)
+#define LTSDBManager [LTSDBClickManager sharedManager]
+#endif /* PrefixHeader_pch */
